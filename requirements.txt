@@ -1,0 +1,4 @@
+pandas
+WooCommerce
+python-dotenv
+requests
