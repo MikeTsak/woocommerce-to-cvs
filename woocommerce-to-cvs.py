@@ -21,10 +21,22 @@ Copyright and licensed by miketsak.gr 2023
 load_dotenv()
 print("Environment variables loaded.")
 
-# WooCommerce API details
-store_url = os.getenv("WOO_STORE_URL")
-consumer_key = os.getenv("WOO_CONSUMER_KEY")
-consumer_secret = os.getenv("WOO_CONSUMER_SECRET")
+# Ask user to choose the store
+store_choice = input("Select the store:\n1. Bulgarian\n2. Greece\nEnter your choice (1 or 2): ")
+
+# Set API details based on the user's choice
+if store_choice == '1':
+    store_url = os.getenv("WOO_STORE_URL_BG")
+    consumer_key = os.getenv("WOO_CONSUMER_KEY_BG")
+    consumer_secret = os.getenv("WOO_CONSUMER_SECRET_BG")
+elif store_choice == '2':
+    store_url = os.getenv("WOO_STORE_URL_GR")
+    consumer_key = os.getenv("WOO_CONSUMER_KEY_GR")
+    consumer_secret = os.getenv("WOO_CONSUMER_SECRET_GR")
+else:
+    print("Invalid choice. Exiting script.")
+    exit()
+
 api_endpoint = f"{store_url}/wp-json/wc/v3/orders"
 
 # User input for date range
