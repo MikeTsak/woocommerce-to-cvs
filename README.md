@@ -25,17 +25,15 @@ After installing Python, you need to set up the script environment:
 1. Clone the repository or download the source code to your local machine.
 2. Open a command prompt or terminal window.
 3. Navigate to the directory where the script is located.
-4. Create a virtual environment (optional but recommended):
+4. Install the required dependencies:
 
 ```bash
-python -m venv venv
-venv\Scripts\activate  # On Windows
-source venv/bin/activate  # On Unix or MacOS
+pip install -r requirements.txt
 ```
-
 ## Usage
 
 To use this script, follow these steps:
+
 1. Set up WooCommerce API credentials (Consumer Key and Consumer Secret).
 2. Store these credentials in a .env file for security.
 3. Run the script:
