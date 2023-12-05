@@ -9,18 +9,33 @@ This Python script is designed to fetch orders from a WooCommerce store and expo
 - Customize CSV output with relevant order details
 - Handle customer data with confidentiality
 
-## Installation
+## Prerequisites
 
 Before running the script, ensure you have Python installed on your system. Then, install the required dependencies:
 
+1. Go to the [official Python website](https://www.python.org/downloads/).
+2. Download the appropriate installer for your operating system.
+3. Run the installer and follow the on-screen instructions. Ensure that you check the option that says "Add Python to PATH" during installation.
+
+
+## Installation
+
+After installing Python, you need to set up the script environment:
+
+1. Clone the repository or download the source code to your local machine.
+2. Open a command prompt or terminal window.
+3. Navigate to the directory where the script is located.
+4. Create a virtual environment (optional but recommended):
+
 ```bash
-pip install -r requirements.txt
+python -m venv venv
+venv\Scripts\activate  # On Windows
+source venv/bin/activate  # On Unix or MacOS
 ```
 
 ## Usage
 
 To use this script, follow these steps:
-
 1. Set up WooCommerce API credentials (Consumer Key and Consumer Secret).
 2. Store these credentials in a .env file for security.
 3. Run the script:
