@@ -80,8 +80,8 @@ df = pd.DataFrame(orders_data)
 now = datetime.now()
 formatted_date_time = now.strftime("%Y-%m-%d-%H-%M-%S")
 
-# Save to CSV
+# Save to CSV with UTF-8 encoding
 filename = f"orders-{formatted_date_time}.csv"
-df.to_csv(filename, index=False)
+df.to_csv(filename, index=False, encoding='utf-8')
 print(f"Orders saved to {filename} successfully.")
 input("Press Enter to exit...")
