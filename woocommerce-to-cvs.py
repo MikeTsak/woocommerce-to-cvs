@@ -22,7 +22,7 @@ load_dotenv()
 print("Environment variables loaded.")
 
 # Ask user to choose the store
-store_choice = input("Select the store:\n1. Bulgarian\n2. Greece\nEnter your choice (1 or 2): ")
+store_choice = input("Select the store:\n1. Bulgarian\n2. Greece\n3. Romania\nEnter your choice (1 or 2 or 3): ")
 
 # Set API details based on the user's choice
 if store_choice == '1':
@@ -33,6 +33,10 @@ elif store_choice == '2':
     store_url = os.getenv("WOO_STORE_URL_GR")
     consumer_key = os.getenv("WOO_CONSUMER_KEY_GR")
     consumer_secret = os.getenv("WOO_CONSUMER_SECRET_GR")
+elif store_choice == '3':
+    store_url = os.getenv("WOO_STORE_URL_RO")
+    consumer_key = os.getenv("WOO_CONSUMER_KEY_RO")
+    consumer_secret = os.getenv("WOO_CONSUMER_SECRET_RO")
 else:
     print("Invalid choice. Exiting script.")
     exit()
